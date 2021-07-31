@@ -1,0 +1,31 @@
+if i == 2
+TT = imgaussfilt(TT,[5,5]);
+end
+if i == 3
+TT = imnoise(uint8(TT),'salt & pepper',0.8);
+end
+if i == 4
+TT = imnoise(uint8(TT),'poisson');
+end
+if i == 5
+TT = imnoise(uint8(TT),'speckle');
+end
+if i == 6
+TT = imsharpen(TT);
+end
+if i == 7
+TT = wiener2(TT,[3 3]);
+end
+if i == 8
+TT = imfilter(TT, fspecial('average', [3 3]));
+end
+if i == 9
+TT = medfilt2(TT, [3 3]);
+end
+if i == 10
+TT = imresize(imresize(TT,[128,128]),[256,256]);
+end
+if i == 11
+TT = imrotate(TT,20);
+TT = imresize(TT,[256,256]);
+end
